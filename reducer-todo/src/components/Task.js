@@ -5,13 +5,13 @@ import {TaskStyle} from '../styling/taskstyling'
 const Todo = () => {
     //useReducer 
   const [state, dispatch] = useReducer(reducer, todo);
-
+    //useState
   const [newTask, setNewTask] = useState("");
-
+    //handleChanges
   const handleChanges = e => {
     setNewTask(e.target.value);
   };
-
+//return
   return (
       <TaskStyle>
     <div className="tasks-list">
@@ -33,7 +33,7 @@ const Todo = () => {
           );
         })}
 
-        {/*Input*/}
+        {/*INPUT*/}
         <input
           className="input"
           type="text"
@@ -43,7 +43,7 @@ const Todo = () => {
           placeholder= 'Add task here...'
         />
 
-        {/* ADD*/}
+        {/* ADD TASK*/}
         <button
           className="btnitem"
           onClick={() => {
@@ -53,7 +53,7 @@ const Todo = () => {
           Add Task
         </button>
 
-        {/* Sub*/}
+        {/* CLEAR COMPLETED*/}
         <button
           className="btnitem"
           onClick={() => {
